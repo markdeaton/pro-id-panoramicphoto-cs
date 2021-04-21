@@ -1,11 +1,14 @@
 ﻿<ArcGIS defaultAssembly="ProIdTool.dll" defaultNamespace="ProIdTool" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{c234d2a5-b39f-4871-be84-e8fc2a167299}" version="1.0" desktopVersion="2.1.10257">
-    <Name>ProIdTool_PanoIDTool</Name>
-    <Description>ProIdTool description</Description>
+  <AddInInfo id="{c234d2a5-b39f-4871-be84-e8fc2a167299}" version="0.75" desktopVersion="2.1.10257">
+    <Name>Pro panorama ID tool</Name>
+    <Description>A tool to allow identification and viewing of panaorama photos attached to features in a map or scene.
+
+Pano.net component licensed under the MIT license. For more info, see https://github.com/hajduakos/PanoDotNet/blob/master/LICENSE
+    </Description>
     <Image>Images\AddinDesktop32.png</Image>
-    <Author>mark4238</Author>
-    <Company>Esri APL</Company>
-    <Date>6/19/2018 9:23:38 AM, 2018</Date>
+    <Author>Mark Deaton</Author>
+    <Company>Esri Applications Prototype Lab</Company>
+    <Date>6/26/2018</Date>
     <Subject>Framework</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
@@ -29,8 +32,8 @@
       <controls>
         <!-- add your controls here -->
         <tool id="ProIdTool_PanoIDTool" caption="Panorama ID" className="PanoIDTool" loadOnClick="true" 
-              smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="What's this?">Lets you view panorama photos attached to a feature.<disabledText /></tooltip>
+              smallImage="Images\icon_16.png" largeImage="Images\icon_32.png" condition="esri_mapping_mapPane">
+          <tooltip heading="What's this?">Identify and view panorama photos attached to a feature.<disabledText /></tooltip>
         </tool>
       </controls>
     </insertModule>

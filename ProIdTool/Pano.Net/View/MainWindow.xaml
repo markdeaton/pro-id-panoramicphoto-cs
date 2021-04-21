@@ -4,7 +4,7 @@
         xmlns:my="clr-namespace:Pano.Net.View"
         xmlns:conv="clr-namespace:Pano.Net.Converters"
         xmlns:controls="clr-namespace:ArcGIS.Desktop.Framework.Controls;assembly=ArcGIS.Desktop.Framework"
-        Title="Pano.Net - Panorama Viewer" Height="600" Width="800" WindowState="Maximized"
+        Title="Pano.Net - Panorama Viewer" Height="768" Width="1024" WindowState="Maximized"
         Icon="/ProIdTool;component/Pano.Net/Resources/icon_16.png">
     <Window.Resources>
         <conv:FullscreenToVisibilityConverter x:Key="fullscreenToVisibilityConverter"/>

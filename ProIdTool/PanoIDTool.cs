@@ -20,7 +20,7 @@ namespace ProIdTool {
         public PanoIDTool() {
             IsSketchTool = true;
             SketchType = SketchGeometryType.Point;
-            SketchOutputMode = SketchOutputMode.Map;
+            SketchOutputMode = SketchOutputMode.Screen;
 
         }
 
@@ -36,7 +36,13 @@ namespace ProIdTool {
                     //List<Attachment> lstAllAttachments = new List<Attachment>();
                     List<ImageAttachment> lstImageAttachments = new List<ImageAttachment>();
 
-                    Dictionary<BasicFeatureLayer, List<long>> feats = mv.GetFeatures(geometry);
+                    Dictionary<BasicFeatureLayer, List<long>> feats = null;
+                    try {
+                        feats = mv.GetFeatures(geometry);
+                    } catch (Exception e) {
+                        MessageBox.Show("Couldn't get features at that location: " + e.Message);
+                        return false;
+                    }
 
                     if (feats.Count <= 0) {
                         MessageBox.Show("No features are there.");
